@@ -8,3 +8,6 @@
 #translateプロンプトの再考
   #説明文の難しい表現
   #。があったら改行する？
+#リソースパック名にver名を追加？
+#データパック等の構造を確認し、下記のようなハードコーディングによる名前定義が存在するかを捜索するスクリプト考案
+summon zombie ~ ~1 ~ {CustomName:'{"text":"My Custom Zombie","color":"red","bold":true}',CustomNameVisible:1b,Tags:["named_mob"]}
