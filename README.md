@@ -18,3 +18,9 @@
 #データパック等の構造を確認し、下記のようなハードコーディングによる名前定義が存在するかを捜索するスクリプト考案
 summon zombie ~ ~1 ~ {CustomName:'{"text":"My Custom Zombie","color":"red","bold":true}',CustomNameVisible:1b,Tags:["named_mob"]}
 
+250922tasks
+【変更点】
+#kanjiconvによるひらがなへの一括変換は精度に問題があるため中止し、hiraganaオプションをすべて削除したうえ、すべてのソースコードとコメントを確認し、不要なコードの削除と最適化、コメントの整合性を調整する
+#ひらがな化のオプションはすべての翻訳タスクが完了したのちgeminiによって実行
+#dockerfileによる仮想環境からpythonを起動した場合、出力されたリソースパックの編集・削除に管理者権限が必要となってしまうため、この解除かdockerfileの廃止
+#上記の変更を踏まえてREADME.txtを再構築
