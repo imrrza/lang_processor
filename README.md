@@ -8,3 +8,8 @@ gemini cli の1mトークンのコンテキスト長をもってすれば、untr
 ・チャンク内の各valueをループで回し、それがマスター辞書のキーとして存在するかを直接確認し、in演算子を用いて部分一致するmy_custom_dictionary.jsonのkeyを持つペアをセッション辞書（python辞書オブジェクト）として持たせ、forループの度に辞書を読み込む処理を軽量化する
 ・辞書読み込みをフォーマット文字列でプロンプトに組み込むため、コードの可読性の観点からprompt.txtからハードコーディングに戻す
 ・progressで出力するtranslation.jsonの代わりに辞書オブジェクトとしてpythonに持たせ、翻訳ルールの参照先としてプロンプトにフォーマット文字列を追加
+
+250929
+【task list に追加】
+・my_custom_dictionary.jsonをチャンクごとに各valueをループで回し、それがキーとして存在するかを確認し、in演算子を用いて部分一致するkeyを持つペアをセッション辞書session_dict.jsonとしてprogressフォルダに保存し、プロンプトで「"@"+パス」コマンドの参照先として設定し、辞書適用の最適化および軽量化を図る
+・session_dict.jsonはprogress.jsonと同じファイル保存ルールを適用
